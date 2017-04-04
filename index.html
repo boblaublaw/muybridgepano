@@ -25,9 +25,9 @@
             </a-assets>
             <a-plane src="#empp00" position="8.854560 0 -4.647232" rotation="0 298.000000 0" width="5.025629" height="6.486155"></a-plane>
             <a-plane src="#empp01" position="10.000000 0 0.000000" rotation="0 270.000000 0" width="5.025629" height="6.486155"></a-plane>
-            <!--a-circle cursor-listener id="spite" material="opacity: 0.5" color="#CCC" radius="0.3" position="8.420 1.11 5.40" rotation="0 242.000000 0"></a-circle-->
             <a-entity position="8.420 1.11 5.40" rotation="0 242.000000 0" geometry="primitive: circle; radius: 0.3" material="opacity: 0.5" color="#CCC">
-                <a-animation begin="click" attribute="position" from="8.420 1.11 5.40" to="0 0 0" dur="2000" fill="both"></a-animation>
+                <a-animation begin="mouseenter" attribute="position" from="8.420 1.11 5.40" to="4.21 .55 2.7" dur="2000" fill="both"></a-animation>
+                <a-animation begin="mouseleave" attribute="position" from="4.21 .55 2.7" to="8.420 1.11 5.40" dur="2000" fill="both"></a-animation>
             </a-entity>
             <a-plane src="#empp02" position="8.854560 0 4.647232" rotation="0 242.000000 0" width="5.025629" height="6.486155"></a-plane>
             <a-plane src="#empp03" position="5.680647 0 8.229839" rotation="0 215.000000 0" width="5.025629" height="6.486155"></a-plane>
@@ -44,9 +44,9 @@
                 <a-entity position="0 0 -1"
                 geometry="primitive: ring; radiusOuter: 0.015; radiusInner: 0.01;"
                 material="color: cyan; shader: flat" 
-                cursor="maxDistance: 30; fuse: false">
-                    <a-animation begin="click" easing="ease-in" attribute="scale"
-                        fill="backwards" from="0.1 0.1 0.1" to="1 1 1" dur="150"></a-animation>
+                cursor="maxDistance: 30; fuse: true">
+                    <!--a-animation begin="click" easing="ease-in" attribute="scale"
+                        fill="backwards" from="0.1 0.1 0.1" to="1 1 1" dur="150"></a-animation-->
                     <!--a-animation begin="fusing" easing="ease-in" attribute="scale"
                         fill="forwards" from="1 1 1" to="0.1 0.1 0.1" dur="1500"></a-animation-->
                 </a-entity>
