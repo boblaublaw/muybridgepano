@@ -55,7 +55,8 @@ cursor="maxDistance: 30; fuse: true">
 fill="backwards" from="0.1 0.1 0.1" to="1 1 1" dur="150"></a-animation-->
 <!--a-animation begin="fusing" easing="ease-in" attribute="scale"
 fill="forwards" from="1 1 1" to="0.1 0.1 0.1" dur="1500"></a-animation-->
-<a-text align="center" color="black" wrap-count="200" value=""></a-text>
+<a-text position="0 -0.25 0" align="center" color="yellow" wrap-count="300" value=""></a-text>
+<a-plane position="0 -0.255 -0.01" scale="0.3 0.04 0" color="black"></a-plane>
 </a-entity>
 <!--a-entity position="0.3 -0.1 -1" text="color: #01ff02; value: polar coords:;"></a-entity-->
 </a-entity>
@@ -68,16 +69,17 @@ fill="forwards" from="1 1 1" to="0.1 0.1 0.1" dur="1500"></a-animation-->
 </a-entity>
 </a-scene>
 <script>
-    var defaultCameraUserHeight; 
     function addRenderStartListener () {
         document.querySelector('a-scene').addEventListener('renderstart', function (evt) {
             var camera = evt.detail.target.camera.el.components.camera;
-            setInterval(function () { 
-                document.querySelector('a-text').setAttribute('value', 'Camera rotation: ' + JSON.stringify(camera.el.getAttribute('rotation'))); 
+            setInterval(function () {
+                var rot = camera.el.getAttribute('rotation');
+                var msg = 'Cam: ' + rot['x'].toFixed(2) + ',' + rot['y'].toFixed(2);
+                document.querySelector('a-text').setAttribute('value', msg);
             }, 100);
         });
     }
-    addRenderStartListener(); //document.body.addEventListener('DOMContentLoaded', addRenderStartListener);
+    addRenderStartListener();
 </script>
 </body>
 </html>"""
