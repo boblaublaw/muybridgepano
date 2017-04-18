@@ -1,71 +1,71 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Panorama</title>
-        <meta name="description" content="Eadward Muybridge Panorama">
-        <script src="http://aframe.io/releases/0.5.0/aframe.min.js"></script>
-    </head>
-    <body>
-        <a-scene>
-            <a-assets>
-                 <img id="empp00" src="http://sublimation.org/test/empp-00.jpg">
-                 <img id="empp01" src="http://sublimation.org/test/empp-01.jpg">
-                 <img id="empp02" src="http://sublimation.org/test/empp-02.jpg">
-                 <img id="empp03" src="http://sublimation.org/test/empp-03.jpg">
-                 <img id="empp04" src="http://sublimation.org/test/empp-04.jpg">
-                 <img id="empp05" src="http://sublimation.org/test/empp-05.jpg">
-                 <img id="empp06" src="http://sublimation.org/test/empp-06.jpg">
-                 <img id="empp07" src="http://sublimation.org/test/empp-07.jpg">
-                 <img id="empp08" src="http://sublimation.org/test/empp-08.jpg">
-                 <img id="empp09" src="http://sublimation.org/test/empp-09.jpg">
-                 <img id="empp10" src="http://sublimation.org/test/empp-10.jpg">
-                 <img id="empp11" src="http://sublimation.org/test/empp-11.jpg">
-                 <img id="empp12" src="http://sublimation.org/test/empp-12.jpg">
-            </a-assets>
-            <a-plane src="#empp00" position="8.854560 0 -4.647232" rotation="0 298.000000 0" width="5.025629" height="6.486155"></a-plane>
-            <a-plane src="#empp01" position="10.000000 0 0.000000" rotation="0 270.000000 0" width="5.025629" height="6.486155"></a-plane>
-            <a-plane src="#empp02" position="8.854560 0 4.647232" rotation="0 242.000000 0" width="5.025629" height="6.486155"></a-plane>
-            <a-plane src="#empp03" position="5.680647 0 8.229839" rotation="0 215.000000 0" width="5.025629" height="6.486155"></a-plane>
-            <a-plane src="#empp04" position="1.205367 0 9.927089" rotation="0 187.000000 0" width="5.025629" height="6.486155"></a-plane>
-            <a-plane src="#empp05" position="-3.546049 0 9.350162" rotation="0 159.000000 0" width="5.025629" height="6.486155"></a-plane>
-            <a-plane src="#empp06" position="-7.485107 0 6.631227" rotation="0 132.000000 0" width="5.025629" height="6.486155"></a-plane>
-            <a-plane src="#empp07" position="-9.709418 0 2.393157" rotation="0 104.000000 0" width="5.025629" height="6.486155"></a-plane>
-            <a-plane src="#empp08" position="-9.709418 0 -2.393157" rotation="0 76.000000 0" width="5.025629" height="6.486155"></a-plane>
-            <a-plane src="#empp09" position="-7.485107 0 -6.631227" rotation="0 49.000000 0" width="5.025629" height="6.486155"></a-plane>
-            <a-plane src="#empp10" position="-3.546049 0 -9.350162" rotation="0 21.000000 0" width="5.025629" height="6.486155"></a-plane>
-            <a-plane src="#empp11" position="1.205367 0 -9.927089" rotation="0 -7.000000 0" width="5.025629" height="6.486155"></a-plane>
-            <a-plane src="#empp12" position="5.680647 0 -8.229839" rotation="0 -35.000000 0" width="5.025629" height="6.486155"></a-plane>
-            <a-entity camera="userHeight: 0.0; zoom: 3" look-controls>
-                <a-entity position="0 0 -1"
-                geometry="primitive: ring; radiusOuter: 0.015; radiusInner: 0.01;"
-                material="color: cyan; shader: flat" 
-                cursor="maxDistance: 30; fuse: true">
-                    <!--a-animation begin="click" easing="ease-in" attribute="scale"
-                        fill="backwards" from="0.1 0.1 0.1" to="1 1 1" dur="150"></a-animation-->
-                    <!--a-animation begin="fusing" easing="ease-in" attribute="scale"
-                        fill="forwards" from="1 1 1" to="0.1 0.1 0.1" dur="1500"></a-animation-->
-                    <a-text align="center" color="black" wrap-count="200" value=""></a-text>
-                </a-entity>
-                <!--a-entity position="0.3 -0.1 -1" text="color: #01ff02; value: polar coords:;"></a-entity-->
-            </a-entity>
-            <a-entity position="8.420 1.11 5.40" rotation="0 242.000000 0" geometry="primitive: circle; radius: 0.3" material="opacity: 0.5" color="#CCC">
-                <a-animation begin="mouseenter" attribute="position" to="4.21 .55 2.7" dur="2000" fill="both"></a-animation>
-                <a-animation begin="mouseleave" attribute="position" to="8.420 1.11 5.40" dur="2000" fill="both"></a-animation>
-                <a-animation begin="mouseenter" attribute="material.opacity" to="0" dur="2000" fill="both"></a-animation>
-                <a-animation begin="mouseleave" attribute="material.opacity" to="0.3" dur="2000" fill="both"></a-animation>
-                <a-entity position="1.93 0 -0.06" geometry="primitive: plane; height: 1; width: 3" color="#DDD"></a-entity>
-            </a-entity>
-        </a-scene>
-        <script>
-          var defaultCameraUserHeight; 
-          function addRenderStartListener () {
-            document.querySelector('a-scene').addEventListener('renderstart', function (evt) {
-              var camera = evt.detail.target.camera.el.components.camera;
-              setInterval(function () { document.querySelector('a-text').setAttribute('value', 'Camera rotation: ' + JSON.stringify(camera.el.getAttribute('rotation'))); }, 100);
-            });
-          }
-          addRenderStartListener(); //document.body.addEventListener('DOMContentLoaded', addRenderStartListener);
-        </script>
-    </body>
+<head>
+<meta charset="utf-8">
+<title>Panorama</title>
+<meta name="description" content="Eadward Muybridge Panorama">
+<script src="http://aframe.io/releases/0.5.0/aframe.min.js"></script>
+</head>
+<body>
+<a-scene>
+<a-assets>
+<img id="empp00" src="http://sublimation.org/test/empp-00.jpg">
+<img id="empp01" src="http://sublimation.org/test/empp-01.jpg">
+<img id="empp02" src="http://sublimation.org/test/empp-02.jpg">
+<img id="empp03" src="http://sublimation.org/test/empp-03.jpg">
+<img id="empp04" src="http://sublimation.org/test/empp-04.jpg">
+<img id="empp05" src="http://sublimation.org/test/empp-05.jpg">
+<img id="empp06" src="http://sublimation.org/test/empp-06.jpg">
+<img id="empp07" src="http://sublimation.org/test/empp-07.jpg">
+<img id="empp08" src="http://sublimation.org/test/empp-08.jpg">
+<img id="empp09" src="http://sublimation.org/test/empp-09.jpg">
+<img id="empp10" src="http://sublimation.org/test/empp-10.jpg">
+<img id="empp11" src="http://sublimation.org/test/empp-11.jpg">
+<img id="empp12" src="http://sublimation.org/test/empp-12.jpg">
+</a-assets>
+<a-plane src="#empp00" position="8.854560 0 -4.647232" rotation="0 298.000000 0" width="5.025629" height="6.486155"></a-plane>
+<a-plane src="#empp01" position="10.000000 0 0.000000" rotation="0 270.000000 0" width="5.025629" height="6.486155"></a-plane>
+<a-plane src="#empp02" position="8.854560 0 4.647232" rotation="0 242.000000 0" width="5.025629" height="6.486155"></a-plane>
+<a-plane src="#empp03" position="5.680647 0 8.229839" rotation="0 215.000000 0" width="5.025629" height="6.486155"></a-plane>
+<a-plane src="#empp04" position="1.205367 0 9.927089" rotation="0 187.000000 0" width="5.025629" height="6.486155"></a-plane>
+<a-plane src="#empp05" position="-3.546049 0 9.350162" rotation="0 159.000000 0" width="5.025629" height="6.486155"></a-plane>
+<a-plane src="#empp06" position="-7.485107 0 6.631227" rotation="0 132.000000 0" width="5.025629" height="6.486155"></a-plane>
+<a-plane src="#empp07" position="-9.709418 0 2.393157" rotation="0 104.000000 0" width="5.025629" height="6.486155"></a-plane>
+<a-plane src="#empp08" position="-9.709418 0 -2.393157" rotation="0 76.000000 0" width="5.025629" height="6.486155"></a-plane>
+<a-plane src="#empp09" position="-7.485107 0 -6.631227" rotation="0 49.000000 0" width="5.025629" height="6.486155"></a-plane>
+<a-plane src="#empp10" position="-3.546049 0 -9.350162" rotation="0 21.000000 0" width="5.025629" height="6.486155"></a-plane>
+<a-plane src="#empp11" position="1.205367 0 -9.927089" rotation="0 -7.000000 0" width="5.025629" height="6.486155"></a-plane>
+<a-plane src="#empp12" position="5.680647 0 -8.229839" rotation="0 -35.000000 0" width="5.025629" height="6.486155"></a-plane>
+<a-entity camera="userHeight: 0.0; zoom: 3" look-controls>
+<a-entity position="0 0 -1"
+geometry="primitive: ring; radiusOuter: 0.015; radiusInner: 0.01;"
+material="color: cyan; shader: flat" 
+cursor="maxDistance: 30; fuse: true">
+<!--a-animation begin="click" easing="ease-in" attribute="scale"
+fill="backwards" from="0.1 0.1 0.1" to="1 1 1" dur="150"></a-animation-->
+<!--a-animation begin="fusing" easing="ease-in" attribute="scale"
+fill="forwards" from="1 1 1" to="0.1 0.1 0.1" dur="1500"></a-animation-->
+<a-text align="center" color="black" wrap-count="200" value=""></a-text>
+</a-entity>
+<!--a-entity position="0.3 -0.1 -1" text="color: #01ff02; value: polar coords:;"></a-entity-->
+</a-entity>
+<a-entity position="8.420 1.11 5.40" rotation="0 242.000000 0" geometry="primitive: circle; radius: 0.3" material="opacity: 0.5" color="#CCC">
+<a-animation begin="mouseenter" attribute="position" to="4.21 .55 2.7" dur="2000" fill="both"></a-animation>
+<a-animation begin="mouseleave" attribute="position" to="8.420 1.11 5.40" dur="2000" fill="both"></a-animation>
+<a-animation begin="mouseenter" attribute="material.opacity" to="0" dur="2000" fill="both"></a-animation>
+<a-animation begin="mouseleave" attribute="material.opacity" to="0.3" dur="2000" fill="both"></a-animation>
+<a-entity position="1.93 0 -0.06" geometry="primitive: plane; height: 1; width: 3" color="#DDD"></a-entity>
+</a-entity>
+</a-scene>
+<script>
+    var defaultCameraUserHeight; 
+    function addRenderStartListener () {
+        document.querySelector('a-scene').addEventListener('renderstart', function (evt) {
+            var camera = evt.detail.target.camera.el.components.camera;
+            setInterval(function () { document.querySelector('a-text').setAttribute('value', 'Camera rotation: ' + JSON.stringify(camera.el.getAttribute('rotation'))); }, 100);
+        });
+    }
+    addRenderStartListener(); //document.body.addEventListener('DOMContentLoaded', addRenderStartListener);
+</script>
+</body>
 </html>
