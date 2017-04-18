@@ -54,10 +54,10 @@ print """<a-entity camera="userHeight: 0.0; zoom: 3" look-controls>
 <!--a-entity position="0.3 -0.1 -1" text="color: #01ff02; value: polar coords:;"></a-entity-->
 </a-entity>
 <a-entity position="8.420 1.11 5.40" rotation="0 242.000000 0" geometry="primitive: circle; radius: 0.3" material="opacity: 0.5" color="grey">
-  <a-animation begin="mouseenter" attribute="position" to="4.21 .55 2.7" delay="100" dur="500" fill="forward"></a-animation>
-  <a-animation begin="mouseenter" attribute="material.opacity" to="0" delay="0" dur="100" fill="forward"></a-animation>
-  <a-animation begin="mouseleave" attribute="material.opacity" to="0.3" delay="1000" dur="2000" fill="backward"></a-animation>
-  <a-animation begin="mouseleave" attribute="position" to="8.420 1.11 5.40" delay="1500" dur="500" fill="backward"></a-animation>
+  <a-animation begin="mouseenter" attribute="position" to="4.21 .55 2.7" delay="100" dur="500" fill="forwards"></a-animation>
+  <a-animation begin="mouseenter" attribute="material.opacity" to="0" delay="0" dur="100" fill="forwards"></a-animation>
+  <a-animation begin="mouseleave" attribute="material.opacity" to="0.3" delay="1000" dur="2000" fill="forwards"></a-animation>
+  <a-animation begin="mouseleave" attribute="position" to="8.420 1.11 5.40" delay="1500" dur="500" fill="forwards"></a-animation>
   <a-entity position="0.09 -0.37 -0.39" geometry="primitive: plane; height: 0.5; width: 1.5" color="lightgrey">
     <a-text position="0 0 0" align="center" wrap-count="100" value="This is a spite wall!" color="black"></a-entity>
   </a-entity>
